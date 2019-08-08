@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+            <meta charset="UTF-8" />
+            <title>Cars</title>
+
+    </head>
+
+    <body>
+        <h1>Cars management</h1>
+
+        <div>
+            <h2>Here is the car of ID : {{.ID}}</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Owner</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                </tr>
+
+                <tr>
+                    <td>{{.ID}}</td>
+                    <td>{{.Owner}}</td>
+                    <td>{{.Brand}}</td>
+                    <td>{{.Model}}</td>
+                    <td>{{.CreatedAt}}</td>
+                    <td>{{.UpdatedAt}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h2>If you want to add a car: </h2>
+
+            <form action="/cars" method="POST">
+                Owner : <input type="text" name ="owner" /><br />
+                Brand : <input type="text" name ="brand" /><br />
+                Model : <input type="text" name ="model" /><br />
+                <input type="submit">
+            </form>
+
+        </div>
+        
+
+    </body>
+</html>
